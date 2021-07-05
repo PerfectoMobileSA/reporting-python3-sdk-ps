@@ -12,7 +12,7 @@ setup(
     url='https://github.com/PerfectoCode',  # use the URL to the GitHub repo
     download_url='https://github.com/PerfectoCode',
     keywords=['Perfecto', 'PerfectoMobile', 'Reporting', 'Selenium', 'Appium', 'Automation testing'],
-    classifiers=[ 'Programming Language :: Python :: 2',
+    classifiers=[ 'Programming Language :: Python :: 3',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent']
         
