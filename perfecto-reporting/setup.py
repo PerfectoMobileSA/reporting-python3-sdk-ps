@@ -2,7 +2,7 @@ from distutils.core import setup
 release_version = '<PLACE_HOLDER_RELEASE_VERSION>'
 
 setup(
-    name='perfecto-py3',
+    name='perfecto3',
     packages=['perfecto','perfecto/client', 'perfecto/Exceptions', 'perfecto/model', 'perfecto/test'],  # this must be the same as the name above
     package_data = {'': ['*.txt']},
 	version=release_version,
