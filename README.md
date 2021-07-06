@@ -1,6 +1,5 @@
 ## Reporting SDK for Python
 
-**Usage:**
 
 - Download the SDK using one of the following commands: <br/>
 `pip install perfecto-py3`<br/>
