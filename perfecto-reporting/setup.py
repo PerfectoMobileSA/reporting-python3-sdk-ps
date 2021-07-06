@@ -1,12 +1,12 @@
-from distutils.core import setup
+from setuptools.setup import setup
 release_version = '<PLACE_HOLDER_RELEASE_VERSION>'
 
 setup(
     name='perfecto-py3',
-    packages=['perfecto','perfecto/client', 'perfecto/Exceptions', 'perfecto/model', 'perfecto/test'],  # this must be the same as the name above
+    packages=['perfecto-py3','perfecto-py3/client', 'perfecto-py3/Exceptions', 'perfecto-py3/model', 'perfecto-py3/test'],  # this must be the same as the name above
     package_data = {'': ['*.txt']},
 	version=release_version,
-    description='Perfecto Reporting SDK for Python\nPerfecto Reporting is a multiple execution digital report, that enables quick navigation within your latest build execution. Get visibility of your test execution status and quickly identify potential problems with an aggregated report. Hone-in and quickly explore your test results all within customized views, that include logical steps and synced artifacts. Distinguish between test methods within a long execution. Add personalized logical steps and tags according to your team and organization.\n For release notes see: https://github.com/PerfectoCode/Samples/blob/master/Reporting/README.md',
+    description='Perfecto Reporting SDK for Python\nPerfecto Reporting is a multiple execution digital report, Add personalized logical steps and tags according to your team and organization.\n For release notes see: https://github.com/PerfectoCode/Samples/blob/master/Reporting/README.md',
     author='Perfecto',
     author_email='perfecto@perfectomobile.com',
     url='https://github.com/PerfectoCode',  # use the URL to the GitHub repo
