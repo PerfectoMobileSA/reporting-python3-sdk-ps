@@ -3,8 +3,8 @@
 **Usage:**
 
 - Download the SDK using one of the following commands: <br/>
-`pip install perfecto-reporting`<br/>
-`easy_install perfecto-reporting`<br/>
+`pip install perfecto-py3`<br/>
+`easy_install perfecto-py3`<br/>
  (Just for illustrating it will be available asap).
  
 - imports: 
