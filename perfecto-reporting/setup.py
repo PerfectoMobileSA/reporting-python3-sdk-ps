@@ -1,4 +1,4 @@
-from setuptools.setup import setup
+from setuptools import setup
 release_version = '<PLACE_HOLDER_RELEASE_VERSION>'
 
 setup(
