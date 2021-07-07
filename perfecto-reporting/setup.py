@@ -6,7 +6,8 @@ setup(
     packages=['perfecto','perfecto/client', 'perfecto/Exceptions', 'perfecto/model', 'perfecto/test'],  # this must be the same as the name above
     package_data = {'': ['*.txt']},
 	version=release_version,
-    description='Perfecto Reporting SDK for Python\nPerfecto Reporting is a multiple execution digital report',
+    License='OSI Approved :: Apache Software License Classifier',
+    Description='Perfecto Reporting SDK for Python\nPerfecto Reporting is a multiple execution digital report',
     author='Perfecto',
     author_email='perfecto@perfectomobile.com',
     url='https://github.com/PerfectoCode',  # use the URL to the GitHub repo
