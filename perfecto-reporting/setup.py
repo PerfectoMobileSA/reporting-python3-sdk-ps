@@ -2,7 +2,7 @@ from setuptools import setup
 release_version = '1.0.1'
 
 setup(
-    name='perfecto-py3',
+    name='perfecto-py3-ps',
     packages=['perfecto','perfecto/client', 'perfecto/Exceptions', 'perfecto/model', 'perfecto/test'],  # this must be the same as the name above
     package_data = {'': ['*.txt']},
 	version=release_version,
