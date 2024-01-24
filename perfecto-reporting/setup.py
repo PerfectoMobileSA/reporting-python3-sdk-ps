@@ -1,5 +1,5 @@
 from setuptools import setup
-release_version = '<PLACE_HOLDER_RELEASE_VERSION>'
+release_version = '1.0.1'
 
 setup(
     name='perfecto-py3',
@@ -7,11 +7,11 @@ setup(
     package_data = {'': ['*.txt']},
 	version=release_version,
     License='OSI Approved :: Apache Software License Classifier',
-    Description='Perfecto Reporting SDK for Python\nPerfecto Reporting is a multiple execution digital report',
+    Description='Perfecto PS customized Reporting SDK for Python\nPerfecto Reporting is a multiple execution digital report',
     author='Perfecto',
     author_email='perfecto@perfectomobile.com',
-    url='https://github.com/PerfectoCode',  # use the URL to the GitHub repo
-    download_url='https://github.com/PerfectoCode',
+    url='https://github.com/PerfectoMobileSA/reporting-python3-sdk-ps.git',  # use the URL to the GitHub repo
+    download_url='https://github.com/PerfectoMobileSA/reporting-python3-sdk-ps.git',
     keywords=['Perfecto', 'PerfectoMobile', 'Reporting', 'Selenium', 'Appium', 'Automation testing'],
     classifiers=[ 'Programming Language :: Python :: 3',
         'License :: OSI Approved :: Apache Software License',
