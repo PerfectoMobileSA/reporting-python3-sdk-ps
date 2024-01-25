@@ -1,6 +1,6 @@
 from .constants import *
 from .PerfectoDeprecator import deprecated
-
+import json
 
 class PerfectoReportiumClient:
     """
@@ -14,6 +14,26 @@ class PerfectoReportiumClient:
         self.perfecto_execution_context = perfecto_execution_context
         self.webdriver = perfecto_execution_context.webdriver
         self.started = False
+        driverCount = 0
+        # Check whether we got a list of webdrivers
+        if isinstance(self.webdriver, list):
+            externalIdAliases = []
+            for driver in self.webdriver:
+                driverCount = driverCount + 1
+                externalIDs = {
+                    'externalId':driver.desired_capabilities['executionId'],
+                    'alias':"perfectoRemote" + str(driverCount)
+                }
+                externalIdAliases.append(externalIDs)
+            # Convert the list into JSON format
+            final_data = json.dumps(externalIdAliases)
+            params = {}
+            params['externalIdAliases'] = final_data
+            try:
+                self.execute_script('mobile:execution:multiple',params)
+            except Exception as e:
+                print("Error while creating multiple driver report")
+        
 
     def test_start(self, name, context):
         """
@@ -159,4 +179,7 @@ class PerfectoReportiumClient:
         :param params: commands parameters
         :return: command's return value
         """
-        return self.webdriver.execute_script(script, params)
+        if isinstance(self.webdriver, list):
+            return self.webdriver[0].execute_script(script, params)
+        else:
+            return self.webdriver.execute_script(script, params)
