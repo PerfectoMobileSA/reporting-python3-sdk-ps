@@ -14,9 +14,8 @@ class PerfectoReportiumClient:
         self.perfecto_execution_context = perfecto_execution_context
         self.webdriver = perfecto_execution_context.webdriver
         self.started = False
-        driverCount = 0
-        # Check whether we got a list of webdrivers
         if isinstance(self.webdriver, list):
+            driverCount = 0
             externalIdAliases = []
             for driver in self.webdriver:
                 driverCount = driverCount + 1
@@ -25,14 +24,14 @@ class PerfectoReportiumClient:
                     'alias':"perfectoRemote" + str(driverCount)
                 }
                 externalIdAliases.append(externalIDs)
-            # Convert the list into JSON format
-            final_data = json.dumps(externalIdAliases)
+            finalData = json.dumps(externalIdAliases)
             params = {}
-            params['externalIdAliases'] = final_data
+            params['externalIdAliases'] = finalData
+            self.started = True
             try:
                 self.execute_script('mobile:execution:multiple',params)
-            except Exception as e:
-                print("Error while creating multiple driver report")
+            except Exception as e: 
+                pass
         
 
     def test_start(self, name, context):
